@@ -1,8 +1,13 @@
 import React from 'react';
 import { Header, Container, Card } from 'semantic-ui-react'
+import { getCategories } from '/fetches/backend.js'
 import './App.css';
 
 class App extends React.Component {
+  componentDidMount(){
+    getCategories().then(data)
+  }
+
   render(){
     return(
       <div>
