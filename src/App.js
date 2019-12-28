@@ -1,11 +1,12 @@
 import React from 'react';
 import { Header, Container, Card } from 'semantic-ui-react'
 import { getCategories } from './fetches/backend.js'
+import { connect } from 'react-redux';
 import './App.css';
 
 class App extends React.Component {
   componentDidMount(){
-    getCategories().then(data)
+    getCategories().then(data => this.props.dispatch({ type: 'GET_CATS', cats: data }))
   }
 
   render(){
@@ -15,7 +16,7 @@ class App extends React.Component {
         <Container>
           Game Board Goes Here
           <Card.Group>
-            <Card fluid color='red' header='Option 1' />
+            <Card fluid color='red' header={this.props.cats} />
             <Card fluid color='orange' header='Option 2' />
             <Card fluid color='yellow' header='Option 3' />
           </Card.Group>
@@ -25,5 +26,5 @@ class App extends React.Component {
   }
 }
 
-
-export default App;
+const mapStateToProps = state => ({ cats: state.cats.cats })
+export default connect(mapStateToProps)(App);
