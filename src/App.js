@@ -1,4 +1,5 @@
 import React from 'react';
+import 'semantic-ui-css/semantic.min.css';
 import { Header, Container, Card } from 'semantic-ui-react'
 import { getCategories } from './fetches/backend.js'
 import { connect } from 'react-redux';
@@ -12,7 +13,7 @@ class App extends React.Component {
   render(){
     return(
       <div>
-        <Header as='h1'> Trivia Games </Header>
+        <Header as='h1' color='red'> Trivia Games </Header>
         <Container>
           Game Board Goes Here
           <Card.Group>
