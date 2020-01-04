@@ -13,11 +13,11 @@ class App extends React.Component {
   render(){
     return(
       <div>
-        <Header as='h1' color='red'> Trivia Games </Header>
+        <Header as='h1' textAlign='center' color='green'> Trivia Games </Header>
         <Container>
           Game Board Goes Here
           <Card.Group>
-            <Card fluid color='red' header={this.props.cats} />
+            <Card fluid color='red' header='Option 1' />
             <Card fluid color='orange' header='Option 2' />
             <Card fluid color='yellow' header='Option 3' />
           </Card.Group>
