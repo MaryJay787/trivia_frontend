@@ -15,14 +15,13 @@ class App extends React.Component {
       <div>
         <Header as='h1' textAlign='center' color='green'> Trivia Games </Header>
         <Container textAlign='center'>
-          Game Board Goes Here
-          <Card.Group>
-            
+          <Card.Group centered>
+
             <Card color='red' >
               <Card.Content header='Ouestion 1' />
                 <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
                 <Card.Content extra>
-                <Button size='mini'>Click Here</Button>
+                <Button size='mini' color='red'>Click Here</Button>
               </Card.Content>   
             </Card>
 
@@ -30,7 +29,7 @@ class App extends React.Component {
               <Card.Content header='Ouestion 2' />
                   <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
                   <Card.Content extra>
-                  <Button size='mini'>Click Here</Button>
+                  <Button size='mini' color='orange'>Click Here</Button>
               </Card.Content>   
             </Card>
 
@@ -38,7 +37,7 @@ class App extends React.Component {
               <Card.Content header='Ouestion 3' />
                   <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
                   <Card.Content extra>
-                  <Button size='mini'>Click Here</Button>
+                  <Button size='mini' color='yellow'>Click Here</Button>
               </Card.Content>   
             </Card>
 
@@ -46,7 +45,7 @@ class App extends React.Component {
               <Card.Content header='Ouestion 4' />
                   <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
                   <Card.Content extra>
-                  <Button size='mini'>Click Here</Button>
+                  <Button size='mini' color='blue'>Click Here</Button>
               </Card.Content>   
             </Card>
 
