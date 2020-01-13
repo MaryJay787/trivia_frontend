@@ -1,6 +1,6 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import { Header, Container, Card, Button } from 'semantic-ui-react'
+import { Header, Container, Card, Button, Image } from 'semantic-ui-react'
 import { getCategories } from './fetches/backend.js'
 import { connect } from 'react-redux';
 import './App.css';
@@ -13,7 +13,12 @@ class App extends React.Component {
   render(){
     return(
       <div>
-        <Header as='h1' textAlign='center' color='green'> Trivia Games </Header>
+        <Image
+          centered
+          size='small'
+          src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8RDUBXOI7bmfxwx7c88cbdRbziTZ6urkgzutvtFAAWxtgza04KQ&s'
+        />
+        <Header size='huge' textAlign='center' color='Black' dividing> Trivia Games </Header>
         <Container textAlign='center'>
           <Card.Group centered>
 
