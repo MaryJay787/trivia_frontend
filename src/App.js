@@ -7,7 +7,7 @@ import './App.css';
 
 class App extends React.Component {
   componentDidMount(){
-    getCategories().then(data => this.props.dispatch({ type: 'GET_CATS', cats: data }))
+    getCategories().then(data => this.props.dispatch({ type: 'GET_CATS', data: data.cats }))
   }
 
   render(){
@@ -24,7 +24,7 @@ class App extends React.Component {
             <Card.Group>
               <Card>
                 <Card.Content>
-                  <Card.Header>Matthew Harris</Card.Header>
+                  <Card.Header>{this.props.cats}</Card.Header>
                   <Card.Meta>Co-Worker</Card.Meta>
                   <Card.Description>
                     Matthew is a pianist living in Nashville.
