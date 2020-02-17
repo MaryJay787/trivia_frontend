@@ -1,6 +1,6 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import { Header, Container, Card, Button, Image } from 'semantic-ui-react'
+import { Header, Container, Card, Button, Image, Divider } from 'semantic-ui-react'
 import { getCategories } from './fetches/backend.js'
 import { connect } from 'react-redux';
 import './App.css';
@@ -19,6 +19,39 @@ class App extends React.Component {
           src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8RDUBXOI7bmfxwx7c88cbdRbziTZ6urkgzutvtFAAWxtgza04KQ&s'
         />
         <Header size='huge' textAlign='center' color='Black' dividing> Trivia Games </Header>
+        <Container textAlign='center' >
+          <Header>Pick Your Category</Header>
+            <Card.Group>
+              <Card>
+                <Card.Content>
+                  <Card.Header>Matthew Harris</Card.Header>
+                  <Card.Meta>Co-Worker</Card.Meta>
+                  <Card.Description>
+                    Matthew is a pianist living in Nashville.
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+
+              <Card>
+                <Card.Content>
+                  <Card.Header content='Jake Smith' />
+                  <Card.Meta content='Musicians' />
+                  <Card.Description content='Jake is a drummer living in New York.' />
+                </Card.Content>
+              </Card>
+
+              <Card>
+                <Card.Content
+                  header='Elliot Baker'
+                  meta='Friend'
+                  description='Elliot is a music producer living in Chicago.'
+                />
+              </Card>
+            </Card.Group>
+        </Container>
+
+        <Divider></Divider>
+
         <Container textAlign='center'>
           <Card.Group centered>
 
