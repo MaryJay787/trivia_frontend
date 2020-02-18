@@ -7,7 +7,9 @@ import './App.css';
 
 class App extends React.Component {
   componentDidMount(){
-    getCategories().then(allcats => this.props.dispatch({ type: 'GET_CATS', allcats}))
+    // getCategories().then(data => this.props.dispatch({ type: 'GET_CATS', data}))
+    getCategories().then(allcats => console.log(allcats))
+
   }
 
   render(){
