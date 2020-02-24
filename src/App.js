@@ -57,7 +57,7 @@ class App extends React.Component {
         <Container textAlign='center'>
           <Card.Group centered>
 
-            <Card color='red' >
+            <Card color='yellow' >
               <Card.Content header='Ouestion 1' />
                 <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
                 <Card.Content extra>
@@ -65,7 +65,7 @@ class App extends React.Component {
               </Card.Content>   
             </Card>
 
-            <Card color='orange' >
+            <Card color='black' >
               <Card.Content header='Ouestion 2' />
                   <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
                   <Card.Content extra>
@@ -81,7 +81,7 @@ class App extends React.Component {
               </Card.Content>   
             </Card>
 
-            <Card color='blue' >
+            <Card color='black' >
               <Card.Content header='Ouestion 4' />
                   <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
                   <Card.Content extra>
