@@ -5,7 +5,7 @@ const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
         case 'GET_CATS': {
-          return { ...state, categories: action.data }
+          return { ...state, categories: action.all_categories }
         }
         default: {
             return state;

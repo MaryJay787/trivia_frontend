@@ -7,8 +7,8 @@ import './App.css';
 
 class App extends React.Component {
   componentDidMount(){
-    // getCategories().then(data => this.props.dispatch({ type: 'GET_CATS', data}))
-    getCategories().then(allcats => console.log(allcats))
+    getCategories().then(all_categories => this.props.dispatch({ type: 'GET_CATS', all_categories}))
+    // getCategories().then(all_categories => console.log(all_categories))
 
   }
 
@@ -26,7 +26,8 @@ class App extends React.Component {
             <Card.Group>
               <Card>
                 <Card.Content>
-                  <Card.Header>{this.props.cats[1]}</Card.Header>
+                  {/* <Card.Header>{this.props.cats[1]}</Card.Header> */}
+                  <Card.Header>First Headers</Card.Header>
                   <Card.Meta>Co-Worker</Card.Meta>
                   <Card.Description>
                     Matthew is a pianist living in Nashville.
@@ -96,5 +97,5 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({ cats: state.cats.categories })
+const mapStateToProps = state => ({ cats: state.categories })
 export default connect(mapStateToProps)(App);
