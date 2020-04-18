@@ -26,27 +26,40 @@ class App extends React.Component {
           <Header>Pick Your Category</Header>
             <Card.Group>
               <Card>
-                <Card.Content>
-                  <Card.Header>{this.props.categories[0] ? this.props.categories[0].title : 'No Title'}</Card.Header>
-                  <Card.Meta>Co-Worker</Card.Meta>
-                  <Card.Description>
-                    Matthew is a pianist living in Nashville.
-                    {/* {this.props.categories[0]} */}
-                  </Card.Description>
-                </Card.Content>
+                <Card.Content
+                  header={this.props.categories[0] ? this.props.categories[0].title : 'No Title'}
+                  meta='Friend'
+                  description='Elliot is a music producer living in Chicago.'
+                />
               </Card>
 
               <Card>
-                <Card.Content>
-                  <Card.Header content='Jake Smith' />
-                  <Card.Meta content='Musicians' />
-                  <Card.Description content='Jake is a drummer living in New York.' />
-                </Card.Content>
+              <Card.Content
+                  header={this.props.categories[1] ? this.props.categories[1].title : 'No Title'}
+                  meta='Friend'
+                  description='Elliot is a music producer living in Chicago.'
+                />
               </Card>
 
               <Card>
                 <Card.Content
-                  header='Elliot Baker'
+                  header={this.props.categories[2] ? this.props.categories[2].title : 'No Title'}
+                  meta='Friend'
+                  description='Elliot is a music producer living in Chicago.'
+                />
+              </Card>
+
+              <Card>
+                <Card.Content
+                  header={this.props.categories[3] ? this.props.categories[3].title : 'No Title'}
+                  meta='Friend'
+                  description='Elliot is a music producer living in Chicago.'
+                />
+              </Card>
+
+              <Card>
+                <Card.Content
+                  header={this.props.categories[4] ? this.props.categories[4].title : 'No Title'}
                   meta='Friend'
                   description='Elliot is a music producer living in Chicago.'
                 />
