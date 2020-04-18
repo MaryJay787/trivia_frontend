@@ -6,11 +6,12 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import theStore from './store';
-
+// import {rootReducer} from './store';
+// import {createStore} from 'redux';
 
 
 ReactDOM.render(
-    <Provider store={theStore} > 
+    <Provider store={theStore}> 
         <BrowserRouter>
             <App />
         </BrowserRouter>
@@ -20,3 +21,4 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+

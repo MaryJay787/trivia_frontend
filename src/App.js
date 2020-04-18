@@ -3,12 +3,13 @@ import 'semantic-ui-css/semantic.min.css';
 import { Header, Container, Card, Button, Image, Divider } from 'semantic-ui-react'
 import { getCategories } from './fetches/backend.js'
 import { connect } from 'react-redux';
+// import store from './index'
 import './App.css';
 
 class App extends React.Component {
   componentDidMount(){
     getCategories().then(all_categories => this.props.dispatch({ type: 'GET_CATS', all_categories}))
-    // getCategories().then(all_categories => console.log(all_categories))
+    // getCategories().then(all_categories => console.log(this.state))
 
   }
 
@@ -26,11 +27,11 @@ class App extends React.Component {
             <Card.Group>
               <Card>
                 <Card.Content>
-                  {/* <Card.Header>{this.props.cats[1]}</Card.Header> */}
-                  <Card.Header>First Headers</Card.Header>
+                  <Card.Header>{this.props.categories[0] ? this.props.categories[0].title : 'No Title'}</Card.Header>
                   <Card.Meta>Co-Worker</Card.Meta>
                   <Card.Description>
                     Matthew is a pianist living in Nashville.
+                    {/* {this.props.categories[0]} */}
                   </Card.Description>
                 </Card.Content>
               </Card>
@@ -97,5 +98,7 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({ cats: state.categories })
+const mapStateToProps = state => ({ categories: state.cats.categories })
+// export default connect(mapStateToProps)(App);
 export default connect(mapStateToProps)(App);
+
