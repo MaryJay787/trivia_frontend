@@ -1,7 +1,7 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import { Header, Container, Card, Button, Image, Divider } from 'semantic-ui-react'
-import { getCategories } from './fetches/backend.js'
+import { getCategories, getPOIQuestions } from './fetches/backend.js'
 import { connect } from 'react-redux';
 // import store from './index'
 import './App.css';
@@ -10,6 +10,9 @@ class App extends React.Component {
   componentDidMount(){
     getCategories().then(all_categories => this.props.dispatch({ type: 'GET_CATS', all_categories}))
     // getCategories().then(all_categories => console.log(this.state))
+    // getPOIQuestions().then(poi_questions => console.log(this.props))
+    getPOIQuestions().then(questions => this.props.dispatch({ type: 'GET_POI_QUES', questions}))
+
 
   }
 
@@ -73,7 +76,7 @@ class App extends React.Component {
           <Card.Group centered>
 
             <Card color='yellow' >
-              <Card.Content header='Ouestion 1' />
+              <Card.Content header={console.log(this.props.poi_questions)} />
                 <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
                 <Card.Content extra>
                 <Button size='mini' color='red'>Click Here</Button>
@@ -111,7 +114,7 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({ categories: state.cats.categories })
+const mapStateToProps = state => ({ categories: state.cats.categories, poi_questions: state.cats.poi_questions })
 // export default connect(mapStateToProps)(App);
 export default connect(mapStateToProps)(App);
 
