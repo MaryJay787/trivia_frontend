@@ -16,6 +16,14 @@ class App extends React.Component {
 
   }
 
+  // displayQuestion = () => {
+  //   if (this.props.all_questions) === []
+  //     return 'No Question'
+  //   else
+  //     return 'I have questions'
+  //   end
+  // }
+
   render(){
     return(
       <div>
@@ -76,7 +84,7 @@ class App extends React.Component {
           <Card.Group centered>
 
             <Card color='yellow' >
-              <Card.Content header={console.log(this.props.poi_questions)} />
+              <Card.Content header='Question Coming' />
                 <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
                 <Card.Content extra>
                 <Button size='mini' color='red'>Click Here</Button>
@@ -114,7 +122,7 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({ categories: state.cats.categories, poi_questions: state.cats.poi_questions })
+const mapStateToProps = state => ({ categories: state.cats.categories, all_questions: state.cats.all_questions })
 // export default connect(mapStateToProps)(App);
 export default connect(mapStateToProps)(App);
 

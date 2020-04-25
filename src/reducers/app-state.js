@@ -1,6 +1,6 @@
 const initialState = {
     categories: [],
-    poi_questions: []
+    all_questions: []
 };
 
 export default (state = initialState, action) => {
@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
           return { ...state, categories: action.all_categories }
         }
         case 'GET_POI_QUES': {
-          return { ...state, poi_questions: action.questions}
+          return { ...state, all_questions: action.questions}
         }
         default: {
             return state;

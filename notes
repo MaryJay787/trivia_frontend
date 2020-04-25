@@ -1,0 +1,13 @@
+### Next Steps for Project ###
+1. When user clicks on a category all the questions for that category appear bellow the categories.
+    1a. After all questions appear, refactor code so that only one question appears at a time.
+
+2. User should be able to select an answer. 
+    2a. Upon user selection the user is told if the answer was right or wrong and the correct answer
+    is shown.
+    2b. After the correct is shown...the question is on a timer and moves to the next question. 
+    
+3. When there are no more questions left for that category user gets to select another category or 
+    quit the game(return to main menu).
+
+4. When MVP is completed then start working on design. 
