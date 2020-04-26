@@ -19,6 +19,26 @@ class App extends React.Component {
   // displayQuestions(){
   //   this.props.all_questions ? this.props.all_questions : 'No Questions'
   // }
+  handlePOIClick(){
+    // this.props.dispatch
+    console.log('POI question has been clicked')
+  }
+
+  handleProClick(){
+    console.log('Prophets question has been clicked')
+  }
+
+  handleWIClick(){
+    console.log('WI questions has been clicked')
+  }
+
+  handleQuranClick(){
+    console.log('Quran question has been clicked')
+  }
+
+  handleHadithClick(){
+    console.log('Hadith question has been clicked')
+  }
 
   render(){
     return(
@@ -32,7 +52,7 @@ class App extends React.Component {
         <Container textAlign='center' >
           <Header>Pick Your Category</Header>
             <Card.Group>
-              <Card>
+              <Card onClick={this.handlePOIClick}>
                 <Card.Content
                   header={this.props.categories[0] ? this.props.categories[0].title : 'No Title'}
                   meta='Friend'
@@ -40,7 +60,7 @@ class App extends React.Component {
                 />
               </Card>
 
-              <Card>
+              <Card onClick={this.handleProClick}>
               <Card.Content
                   header={this.props.categories[1] ? this.props.categories[1].title : 'No Title'}
                   meta='Friend'
@@ -48,7 +68,7 @@ class App extends React.Component {
                 />
               </Card>
 
-              <Card>
+              <Card onClick={this.handleWIClick}>
                 <Card.Content
                   header={this.props.categories[2] ? this.props.categories[2].title : 'No Title'}
                   meta='Friend'
@@ -56,7 +76,7 @@ class App extends React.Component {
                 />
               </Card>
 
-              <Card>
+              <Card onClick={this.handleQuranClick}>
                 <Card.Content
                   header={this.props.categories[3] ? this.props.categories[3].title : 'No Title'}
                   meta='Friend'
@@ -64,7 +84,7 @@ class App extends React.Component {
                 />
               </Card>
 
-              <Card>
+              <Card onClick={this.handleHadithClick}>
                 <Card.Content
                   header={this.props.categories[4] ? this.props.categories[4].title : 'No Title'}
                   meta='Friend'
