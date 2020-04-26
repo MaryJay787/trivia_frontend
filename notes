@@ -1,4 +1,6 @@
 ### Next Steps for Project ###
+0. Get questions to appear on the frontend 
+
 1. When user clicks on a category all the questions for that category appear bellow the categories.
     1a. After all questions appear, refactor code so that only one question appears at a time.
 

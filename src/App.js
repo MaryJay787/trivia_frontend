@@ -16,12 +16,8 @@ class App extends React.Component {
 
   }
 
-  // displayQuestion = () => {
-  //   if (this.props.all_questions) === []
-  //     return 'No Question'
-  //   else
-  //     return 'I have questions'
-  //   end
+  // displayQuestions(){
+  //   this.props.all_questions ? this.props.all_questions : 'No Questions'
   // }
 
   render(){
@@ -84,8 +80,8 @@ class App extends React.Component {
           <Card.Group centered>
 
             <Card color='yellow' >
-              <Card.Content header='Question Coming' />
-                <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
+              <Card.Content header='Question 1' />
+                <Card.Content description={this.props.all_questions[0] ? this.props.all_questions[0].ask : 'No Question'} />
                 <Card.Content extra>
                 <Button size='mini' color='red'>Click Here</Button>
               </Card.Content>   
