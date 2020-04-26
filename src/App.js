@@ -32,25 +32,30 @@ class App extends React.Component {
   // displayQuestions(){
   //   this.props.all_questions ? this.props.all_questions : 'No Questions'
   // }
-  handlePOIClick = () => {
+  handlePOIClick = (e) => {
+    e.preventDefault()
     this.props.dispatch({ type: 'CLICKED'})
     
     console.log('POI question has been clicked')
   }
 
-  handleProClick(){
+  handleProClick = () => {
+    this.props.dispatch({ type: 'CLICKED'})
     console.log('Prophets question has been clicked')
   }
 
-  handleWIClick(){
+  handleWIClick = () => {
+    this.props.dispatch({ type: 'CLICKED'})
     console.log('WI questions has been clicked')
   }
 
-  handleQuranClick(){
+  handleQuranClick = () => {
+    this.props.dispatch({ type: 'CLICKED'})
     console.log('Quran question has been clicked')
   }
 
-  handleHadithClick(){
+  handleHadithClick = () => {
+    this.props.dispatch({ type: 'CLICKED'})
     console.log('Hadith question has been clicked')
   }
 
