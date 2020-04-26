@@ -1,5 +1,5 @@
 ### Next Steps for Project ###
-0. Get questions to appear on the frontend 
+0. Get questions to appear on the frontend \/
 
 1. When user clicks on a category all the questions for that category appear bellow the categories.
     1a. After all questions appear, refactor code so that only one question appears at a time.
@@ -13,3 +13,9 @@
     quit the game(return to main menu).
 
 4. When MVP is completed then start working on design. 
+
+### Current Issue ###
+1. Need to get Question to go Away when the same category is clicked again or when another category is clicked
+2. All questions need to appear when category is clicked 
+OORRRR
+2a. Create 'next question button'  
