@@ -6,6 +6,19 @@ import { connect } from 'react-redux';
 // import store from './index'
 import './App.css';
 
+function Question(){
+  return (
+    <Card color='yellow' >
+      <Card.Content header='Conditional Rendered Question' />
+        {/* <Card.Content description={this.props.all_questions[0] ? this.props.all_questions[0].ask : 'No Question'} /> */}
+        <Card.Content description='this is where the question will go'/>
+        <Card.Content extra>
+        <Button size='mini' color='red'>Click Here</Button>
+      </Card.Content>   
+    </Card>
+  );
+}
+
 class App extends React.Component {
   componentDidMount(){
     getCategories().then(all_categories => this.props.dispatch({ type: 'GET_CATS', all_categories}))
@@ -19,8 +32,9 @@ class App extends React.Component {
   // displayQuestions(){
   //   this.props.all_questions ? this.props.all_questions : 'No Questions'
   // }
-  handlePOIClick(){
-    // this.props.dispatch
+  handlePOIClick = () => {
+    this.props.dispatch({ type: 'CLICKED'})
+    
     console.log('POI question has been clicked')
   }
 
@@ -39,6 +53,7 @@ class App extends React.Component {
   handleHadithClick(){
     console.log('Hadith question has been clicked')
   }
+
 
   render(){
     return(
@@ -97,48 +112,15 @@ class App extends React.Component {
         <Divider></Divider>
 
         <Container textAlign='center'>
-          <Card.Group centered>
-
-            <Card color='yellow' >
-              <Card.Content header='Question 1' />
-                <Card.Content description={this.props.all_questions[0] ? this.props.all_questions[0].ask : 'No Question'} />
-                <Card.Content extra>
-                <Button size='mini' color='red'>Click Here</Button>
-              </Card.Content>   
-            </Card>
-
-            <Card color='black' >
-              <Card.Content header='Ouestion 2' />
-                  <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
-                  <Card.Content extra>
-                  <Button size='mini' color='orange'>Click Here</Button>
-              </Card.Content>   
-            </Card>
-
-            <Card color='yellow' >
-              <Card.Content header='Ouestion 3' />
-                  <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
-                  <Card.Content extra>
-                  <Button size='mini' color='yellow'>Click Here</Button>
-              </Card.Content>   
-            </Card>
-
-            <Card color='black' >
-              <Card.Content header='Ouestion 4' />
-                  <Card.Content description='sdkjfdjklf jdfsj jdfksldh f jshlfkdjf jsldfkjsdh lsjdhjdfhls sdhkj ' />
-                  <Card.Content extra>
-                  <Button size='mini' color='blue'>Click Here</Button>
-              </Card.Content>   
-            </Card>
-
-          </Card.Group>
+          {this.props.clicked ? <Question /> : 'No Question'}
         </Container>
+       
       </div>
     )
   }
 }
 
-const mapStateToProps = state => ({ categories: state.cats.categories, all_questions: state.cats.all_questions })
+const mapStateToProps = state => ({ categories: state.cats.categories, all_questions: state.cats.all_questions, clicked: state.cats.clicked })
 // export default connect(mapStateToProps)(App);
 export default connect(mapStateToProps)(App);
 
