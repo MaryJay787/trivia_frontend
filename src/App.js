@@ -19,6 +19,19 @@ function Question(){
   );
 }
 
+// export function Hello(name) {
+//   if (name) {
+//   return <Header> Hello, {name}!</Header>;
+
+//   } else {
+//     return <span> Hey, Stranger</span>
+//   }
+// }
+
+export function sum(a, b) {
+  return a + b;
+}
+
 class App extends React.Component {
   componentDidMount(){
     getCategories().then(all_categories => this.props.dispatch({ type: 'GET_CATS', all_categories}))
