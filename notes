@@ -18,4 +18,8 @@
 1. Need to get Question to go Away when the same category is clicked again or when another category is clicked
 2. All questions need to appear when category is clicked 
 OORRRR
-2a. Create 'next question button'  
+2a. Create 'next question button' 
+
+###Also another issue is figuring out how to setup testing environment with JEST.
+
+###Current error a random Type Error since ive adjusted some code for JEST
