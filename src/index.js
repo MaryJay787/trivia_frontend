@@ -8,6 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import theStore from './store';
 // import {rootReducer} from './store';
 // import {createStore} from 'redux';
+{/* <Provider store={theStore}>  */}
 
 
 ReactDOM.render(

@@ -1,13 +1,15 @@
 import React from 'react';
-import { render, unmountComponentAtNode} from 'react-dom';
-import { act } from 'react-dom/test-utils';
-import sum from './App';
+import { render } from '@testing-library/react';
+import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("Counter Testing", () => {
+  test('renders learn react link', () => {
+    const { getByText } = render(<App />);
+    const linkElement = getByText("This is counter app");
+    expect(linkElement).toBeInTheDocument();
+  });
 });
+
 
 // test('adds 1 + 2 to equal 3', () => {
 //   expect(sum(1, 2)).toBe(3);

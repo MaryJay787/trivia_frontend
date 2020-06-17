@@ -76,7 +76,8 @@ class App extends React.Component {
   render(){
     return(
       <div>
-        <Image
+        <Header> This is counter app </Header>
+        {/* <Image
           centered
           size='small'
           src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8RDUBXOI7bmfxwx7c88cbdRbziTZ6urkgzutvtFAAWxtgza04KQ&s'
@@ -131,7 +132,7 @@ class App extends React.Component {
 
         <Container textAlign='center'>
           {this.props.clicked ? <Question /> : 'No Question'}
-        </Container>
+        </Container> */}
        
       </div>
     )
